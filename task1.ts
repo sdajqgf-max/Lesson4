@@ -6,6 +6,9 @@ const text: string = `Я, ${name}, учу TYPESCRIPT`;
 
 const yourName: string = "Саша";
 
-if (text.includes(yourName)){
-    console.log(text.toLowerCase());
+if (text.includes(yourName)) {
+  console.log(text.toLowerCase());
+} else {
+  const newText = text.slice(0, text.indexOf(name)) + yourName + text.slice(text.indexOf(name) + name.length);
+  console.log(newText.toLowerCase()); 
 }
